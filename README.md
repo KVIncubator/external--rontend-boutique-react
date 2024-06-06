@@ -38,7 +38,7 @@ The `npm run` command will list all of the scripts available to run for this pro
 
 JHipster ships with PWA (Progressive Web App) support, and it's turned off by default. One of the main components of a PWA is a service worker.
 
-The service worker initialization code is commented out by default. To enable it, uncomment the following code in `src//index.html`:
+The service worker initialization code is commented out by default. To enable it, uncomment the following code in `src/index.html`:
 
 ```html
 <script>

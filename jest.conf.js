@@ -15,9 +15,9 @@ module.exports = {
   testEnvironmentOptions: {
     url: 'http://localhost/',
   },
-  cacheDirectory: '<rootDir>/target/jest-cache',
-  coverageDirectory: '<rootDir>/target/test-results/',
-  testMatch: ['<rootDir>/src//app/**/@(*.)@(spec.ts?(x))'],
+  cacheDirectory: '<rootDir>/build/jest-cache',
+  coverageDirectory: '<rootDir>/build/test-results/',
+  testMatch: ['<rootDir>/src/app/**/@(*.)@(spec.ts?(x))'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   coveragePathIgnorePatterns: ['<rootDir>/src/test/javascript/'],
   moduleNameMapper: mapTypescriptAliasToJestAlias({
@@ -26,11 +26,11 @@ module.exports = {
   }),
   reporters: [
     'default',
-    ['jest-junit', { outputDirectory: './target/test-results/', outputName: 'TESTS-results-jest.xml' }],
-    ['jest-sonar', { outputDirectory: './target/test-results/jest', outputName: 'TESTS-results-sonar.xml' }],
+    ['jest-junit', { outputDirectory: './build/test-results/', outputName: 'TESTS-results-jest.xml' }],
+    ['jest-sonar', { outputDirectory: './build/test-results/jest', outputName: 'TESTS-results-sonar.xml' }],
   ],
   testPathIgnorePatterns: ['<rootDir>/node_modules/'],
-  setupFiles: ['<rootDir>/src//app/setup-tests.ts'],
+  setupFiles: ['<rootDir>/src/app/setup-tests.ts'],
   globals: {
     I18N_HASH: 'generated_hash',
     ...require('./webpack/environment'),
